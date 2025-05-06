@@ -22,7 +22,7 @@ const isHovered = ref(false);
         <li><a href="/" class="hover:text-red-400">Home</a></li>
         <li><a href="/about" class="hover:text-red-400">About</a></li>
         <li><a href="/contact" class="hover:text-red-400">Contact</a></li>
-        <li><a href="/Settings" class="hover:text-red-400">Settings</a></li>
+        <li><a href="/settings" class="hover:text-red-400">Settings</a></li>
       </ul>
 
       <!-- Hamburger (mobile only) -->
@@ -47,7 +47,7 @@ const isHovered = ref(false);
         <li><a href="/" class="block py-2">Home</a></li>
         <li><a href="/about" class="block py-2">About</a></li>
         <li><a href="/contact" class="block py-2">Contact</a></li>
-        <li><a href="/Settings" class="block py-2">Settings</a></li>
+        <li><a href="/settings" class="block py-2">Settings</a></li>
       </ul>
     </div>
   </nav>
