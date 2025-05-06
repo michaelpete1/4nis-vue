@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
-import Products from "../views/Products.vue";
-import Contact from "../views/Contact.vue";
-import Settings from "../views/Settings.vue";
+import Home from "../views/home.vue";
+import About from "../views/about.vue";
+import Products from "../views/products.vue";
+import Contact from "../views/contact.vue";
+import Settings from "../views/settings.vue";
+
 const routes = [
-  { path: "/", name: "Home", component: Home },
-  { path: "/About", name: "About", component: About },
-  { path: "/Products", name: "Products", component: Products },
-  { path: "/Contact", name: "Contacts", component: Contact },
-  { path: "/Settings", name: "Settings", component: Settings },
+  { path: "/", name: "home", component: Home },
+  { path: "/about", name: "about", component: About },
+  { path: "/products", name: "products", component: Products },
+  { path: "/contact", name: "contact", component: Contact },
+  { path: "/settings", name: "settings", component: Settings },
 ];
 
 const router = createRouter({
