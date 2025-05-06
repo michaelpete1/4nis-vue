@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline"; // Import icons
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const isOpen = ref(false);
 const isHovered = ref(false);
@@ -14,42 +14,40 @@ const isHovered = ref(false);
     @mouseleave="isHovered = false"
   >
     <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
       <a href="/" class="text-2xl font-bold text-white">4NIS</a>
 
-      <!-- Hamburger Button -->
-      <button @click="isOpen = !isOpen" class="text-white focus:outline-none">
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 text-white text-lg">
+        <li><a href="/" class="hover:text-red-400">Home</a></li>
+        <li><a href="/about" class="hover:text-red-400">About</a></li>
+        <li><a href="/contact" class="hover:text-red-400">Contact</a></li>
+        <li><a href="/Settings" class="hover:text-red-400">Settings</a></li>
+      </ul>
+
+      <!-- Hamburger (mobile only) -->
+      <button
+        @click="isOpen = !isOpen"
+        class="text-white focus:outline-none md:hidden"
+      >
         <Bars3Icon v-if="!isOpen" class="w-8 h-8" />
         <XMarkIcon v-if="isOpen" class="w-8 h-8" />
       </button>
     </div>
 
-    <!-- Mobile Menu (Translucent Box on the Right) -->
+    <!-- Mobile Sidebar Menu -->
     <div
-      class="fixed top-0 right-0 h-[85vh] w-56 bg-gray-800/90 backdrop-blur-lg shadow-lg rounded-lg transition-transform duration-300"
+      class="fixed top-0 right-0 h-[85vh] w-56 bg-gray-800/90 backdrop-blur-lg shadow-lg rounded-lg transition-transform duration-300 md:hidden"
       :class="isOpen ? 'translate-x-0' : 'translate-x-full'"
     >
       <button @click="isOpen = false" class="absolute top-4 right-4 text-white">
         <XMarkIcon class="w-8 h-8" />
       </button>
       <ul class="mt-16 space-y-4 text-lg text-white text-center">
-        <li class="relative group">
-          <a href="/" class="block py-2">Home</a>
-          <span
-            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-red-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          ></span>
-        </li>
-        <li class="relative group">
-          <a href="/about" class="block py-2">About</a>
-          <span
-            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-red-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          ></span>
-        </li>
-        <li class="relative group">
-          <a href="/Contact" class="block py-2">Contact</a>
-          <span
-            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-red-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          ></span>
-        </li>
+        <li><a href="/" class="block py-2">Home</a></li>
+        <li><a href="/about" class="block py-2">About</a></li>
+        <li><a href="/contact" class="block py-2">Contact</a></li>
+        <li><a href="/Settings" class="block py-2">Settings</a></li>
       </ul>
     </div>
   </nav>
