@@ -26,7 +26,7 @@ onMounted(() => {
         Discover amazing fashion and electronics.
       </p>
       <a
-        href="/Products"
+        href="/products"
         class="mt-6 inline-block bg-red-500 hover:bg-red-600 px-6 py-3 rounded-lg text-lg font-semibold transition"
       >
         Start Shopping
