@@ -8,7 +8,7 @@ const Contact = () => import('../views/contact.vue');
 const Settings = () => import('../views/settings.vue');
 
 const routes = [
-  { path: "/", name: "Home", component: Home },
+  { path: "/", name: "home", component: Home },
   { path: "/about", name: "about", component: About },
   { path: "/products", name: "products", component: Products },
   { path: "/contact", name: "contact", component: Contact },
