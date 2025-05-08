@@ -27,22 +27,36 @@
         Whether you're looking for the latest tech gadgets or stylish clothing, we've got you covered.
       </p>
 
-      <!-- Image with animated text overlay -->
-      <div class="relative w-full max-w-2xl mx-auto mt-10 rounded-xl overflow-hidden shadow-xl group">
+      <!-- Image with animated text overlay and bubble click effect -->
+      <div
+        class="relative w-full mt-10 rounded-xl overflow-hidden shadow-xl group transform transition duration-500 hover:scale-105 animate-fade-in-up"
+        @click="createBubble"
+        ref="imageContainer"
+      >
         <img
           src="/portbcgnd2.jpg"
           alt="Team working together"
-          class="w-full h-auto object-cover"
+          class="w-full h-auto object-cover transform transition duration-700 ease-in-out hover:scale-110"
           loading="lazy"
         />
-        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center pointer-events-none">
           <p
-            class="text-xl text-white font-semibold text-center animate-fade-text"
+            class="text-xl text-white font-semibold text-center animate-fade-text transition-opacity duration-1000 ease-in-out"
             aria-live="polite"
           >
             {{ currentMessage }}
           </p>
         </div>
+        <!-- Bubble container -->
+        <span
+          v-for="(bubble, index) in bubbles"
+          :key="index"
+          class="absolute w-6 h-6 bg-white opacity-20 rounded-full pointer-events-none bubble"
+          :style="{
+            top: bubble.y + 'px',
+            left: bubble.x + 'px'
+          }"
+        />
       </div>
     </div>
 
@@ -77,6 +91,25 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(intervalId)
 })
+
+// Bubble animation state
+const bubbles = ref<{ x: number; y: number }[]>([])
+const imageContainer = ref<HTMLElement | null>(null)
+
+function createBubble(e: MouseEvent) {
+  const rect = imageContainer.value?.getBoundingClientRect()
+  if (!rect) return
+
+  const x = e.clientX - rect.left - 12 // Center bubble
+  const y = e.clientY - rect.top - 12
+
+  bubbles.value.push({ x, y })
+
+  // Remove bubble after animation
+  setTimeout(() => {
+    bubbles.value.shift()
+  }, 600)
+}
 </script>
 
 <style scoped>
@@ -102,5 +135,24 @@ onUnmounted(() => {
 }
 .animate-fade-in-up {
   animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Bubble animation */
+@keyframes bubble-pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(3);
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+.bubble {
+  animation: bubble-pop 0.6s ease-out forwards;
 }
 </style>
