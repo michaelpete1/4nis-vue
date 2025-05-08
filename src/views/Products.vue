@@ -69,8 +69,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const products = [
-  { id: 1, image: '/babyimage2.jpg', name: 'Product 1' },
-  { id: 2, image: '/babyimage.jpg', name: 'Product 2' },
-  { id: 3, image: '/kitchen ut1.jpg', name: 'Product 3' }, // Avoid spaces in filenames
+  { id: 1, image: '../public/babyimage.jpg', name: 'Product 1' },
+  { id: 2, image: '../public/pc2.jpg', name: 'Product 2' },
+  { id: 3, image: '../public/kitchen ut1.jpg', name: 'Product 3' },
+  { id: 4, image: '../public/kitchen ut.jpg', name: 'Product 4' }, 
+  { id: 5, image: '../public/babyimage1.jpg', name: 'Product 5' },
+  { id: 3, image: '../public/pc3.jpg', name: 'Product 6' },
 ];
 </script>
