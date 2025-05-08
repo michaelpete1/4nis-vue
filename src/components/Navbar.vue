@@ -19,7 +19,7 @@ const isHovered = ref(false);
 
       <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-6 text-white text-lg">
-        <li><a href="/about" class="hover:text-red-400">About</a></li>
+        <li><a href="/About" class="hover:text-red-400">About</a></li>
         <li><a href="/contact" class="hover:text-red-400">Contact</a></li>
         <li><a href="/settings" class="hover:text-red-400">Settings</a></li>
       </ul>
@@ -43,7 +43,7 @@ const isHovered = ref(false);
         <XMarkIcon class="w-8 h-8" />
       </button>
       <ul class="mt-16 space-y-4 text-lg text-white text-center">
-        <li><a href="/about" class="block py-2">About</a></li>
+        <li><a href="/About" class="block py-2">About</a></li>
         <li><a href="/contact" class="block py-2">Contact</a></li>
         <li><a href="/settings" class="block py-2">Settings</a></li>
       </ul>
