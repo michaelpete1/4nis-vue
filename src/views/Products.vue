@@ -71,6 +71,6 @@ import 'swiper/css/pagination';
 const products = [
   { id: 1, image: '/babyimage2.jpg', name: 'Product 1' },
   { id: 2, image: '/babyimage.jpg', name: 'Product 2' },
-  { id: 3, image: '/kitchen-ut1.jpg', name: 'Product 3' }, // Avoid spaces in filenames
+  { id: 3, image: '/kitchen ut1.jpg', name: 'Product 3' }, // Avoid spaces in filenames
 ];
 </script>
