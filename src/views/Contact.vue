@@ -83,10 +83,6 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline';
         </div>
       </div>
     </div>
-
-    <footer class="bg-gray-800 text-center py-4 mt-10">
-      <p class="text-gray-300 text-sm">© 2025 4NIS Marketplace</p>
-    </footer>
   </div>
 </template>
 

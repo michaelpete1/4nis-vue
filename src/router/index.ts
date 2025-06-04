@@ -6,7 +6,7 @@ const Home = () => import('../views/home.vue');
 const About = () => import('../views/about.vue');
 const Products = () => import('../views/products.vue'); 
 const Contact = () => import('../views/contact.vue');
-const Settings = () => import('../views/settings.vue');
+const Faq = () => import('../views/faq.vue');
 const NotFound = () => import('../views/NotFound.vue'); // Create this file
 
 const routes = [
@@ -15,7 +15,7 @@ const routes = [
   { path: '/about', name: 'about', component: About },
   { path: '/products', name: 'products', component: Products },
   { path: '/contact', name: 'contact', component: Contact },
-  { path: '/settings', name: 'settings', component: Settings },
+  { path: '/faq', name: 'faq', component: Faq },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }, // 404 catch-all
 ];
 
