@@ -1,4 +1,3 @@
-// src/router/index.ts
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Lazy-loaded views
@@ -6,7 +5,7 @@ const Home = () => import('../views/Home.vue')
 const About = () => import('../views/About.vue')
 const Products = () => import('../views/Products.vue')
 const Contact = () => import('../views/Contact.vue')
-const Faq = () => import('../views/Faq.vue')
+// Removed Faq import
 const NotFound = () => import('../views/NotFound.vue') // Optional 404 page
 
 const routes = [
@@ -14,7 +13,7 @@ const routes = [
   { path: '/About', name: 'about', component: About },
   { path: '/Products', name: 'products', component: Products },
   { path: '/Contact', name: 'contact', component: Contact },
-  { path: '/Faq', name: 'faq', component: Faq },
+  // Removed Faq route
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
