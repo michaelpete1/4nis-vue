@@ -24,9 +24,9 @@ const isHovered = ref(false);
 
       <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-6 text-white text-lg">
-        <li><a href="/about" class="hover:text-red-400 transition-colors">About</a></li>
-        <li><a href="/contact" class="hover:text-red-400 transition-colors">Contact</a></li>
-        <li><a href="/faq" class="hover:text-red-400 transition-colors">Faq</a></li>
+        <li><a href="/About" class="hover:text-red-400 transition-colors">About</a></li>
+        <li><a href="/Contact" class="hover:text-red-400 transition-colors">Contact</a></li>
+        <li><a href="/Faq" class="hover:text-red-400 transition-colors">Faq</a></li>
       </ul>
 
       <!-- Hamburger Icon -->
@@ -49,9 +49,9 @@ const isHovered = ref(false);
         <XMarkIcon class="w-8 h-8" />
       </button>
       <ul class="mt-16 space-y-4 text-lg text-white text-center">
-        <li><a href="/about" class="block py-2 hover:text-red-400">About</a></li>
-        <li><a href="/contact" class="block py-2 hover:text-red-400">Contact</a></li>
-        <li><a href="/faq" class="block py-2 hover:text-red-400">Faq</a></li>
+        <li><a href="/About" class="block py-2 hover:text-red-400">About</a></li>
+        <li><a href="/Contact" class="block py-2 hover:text-red-400">Contact</a></li>
+        <li><a href="/Faq" class="block py-2 hover:text-red-400">Faq</a></li>
       </ul>
     </div>
   </nav>
